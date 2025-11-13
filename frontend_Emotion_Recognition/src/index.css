@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* ---- UI scale: phóng to toàn bộ font-size & spacing nhẹ nhàng ---- */
+:root{
+  --ui-scale: 1.08;     
+  --ui-base-font: 16px; 
+}
+
+/* Scale font toàn app */
+html { font-size: calc(var(--ui-base-font) * var(--ui-scale)); }
+
+/* Tăng nhẹ spacing & radius mặc định (không phá layout) */
+* { --tw-ring-offset-width: 0px; }
+.card-pad { padding: calc(1.5rem * var(--ui-scale)); }       
+.card-pad-lg { padding: calc(2rem * var(--ui-scale)); }      
+.btn-pad { padding: calc(0.75rem * var(--ui-scale)) calc(1.25rem * var(--ui-scale)); } 
+.round-xl { border-radius: calc(0.75rem * var(--ui-scale)); } 
+
+
+
+
+/* ROBOT ANIMATIONS */
+@keyframes robot-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+@keyframes robot-tilt {
+  0%, 100% { transform: rotate(-2deg); }
+  50%      { transform: rotate(2deg); }
+}
+@keyframes robot-wave {
+  0%   { transform: rotate(0deg) translateY(0); }
+  25%  { transform: rotate(18deg) translateY(-1px); }
+  50%  { transform: rotate(0deg) translateY(0); }
+  75%  { transform: rotate(18deg) translateY(-1px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+.robot-bob { animation: robot-bob 2.8s ease-in-out infinite; }
+.robot-tilt { animation: robot-tilt 3.2s ease-in-out infinite; transform-origin: 50% 80%; }
+.robot-wave { animation: robot-wave 1.6s ease-in-out infinite; transform-origin: 60% 60%; }
+
+
+/* == Chat launcher sync motion == */
+@keyframes ai-bob {
+  0%, 100% { transform: translateY(0) }
+  50%      { transform: translateY(-4px) }
+}
+.ai-bob {
+  animation: ai-bob 2.8s ease-in-out infinite;
+}
+
+/* Tùy chọn "xóa nền" cho video robot trên nền tối */
+.robot-video {
+  /* nếu nền robot là trắng, screen sẽ làm trắng 'tan' vào nền tối */
+  mix-blend-mode: screen;
+  /* fallback cho nền xám-đậm: */
+  /* mix-blend-mode: lighten; */
+}
+
+
+/* Hiệu ứng nổi cho chấm sáng */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-80px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease-in forwards;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 0.6s;
+}

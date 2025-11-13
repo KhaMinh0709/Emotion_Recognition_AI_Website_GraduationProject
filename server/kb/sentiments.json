@@ -1,0 +1,6 @@
+{
+  "text": ["positive", "negative", "neutral"],
+  "vision": ["happy", "sad", "angry", "surprised", "neutral"],
+  "audio": ["positive", "negative", "neutral"],
+  "fused_note": "Fused model kết hợp text+audio+vision để ra final sentiment."
+}

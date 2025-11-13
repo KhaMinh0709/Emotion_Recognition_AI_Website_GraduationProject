@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install Dependencies and Build",
+			"type": "shell",
+			"command": "cd frontend && npm install && npm run build && cd ../backend && npm install && npm run generate",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		}
+	]
+}

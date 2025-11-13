@@ -1,0 +1,33 @@
+# Web Framework
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+aiofiles==23.2.1
+pydantic==2.4.2
+pydantic-settings==2.0.3
+
+# Deep Learning
+tensorflow==2.19
+torch==2.1.0
+torchvision==0.16.0
+
+# Data Processing
+numpy>=1.26.0
+pandas==2.1.2
+scipy==1.11.3
+
+# Image Processing
+opencv-python==4.8.1.78
+Pillow==10.1.0
+
+# Audio Processing
+librosa==0.10.1
+soundfile==0.12.1
+audioread==3.0.1  # For additional audio format support (MP3, WebA, etc.)
+pydub==0.25.1  # For audio format conversion without ffmpeg
+
+# Utils
+python-dotenv==1.0.0
+scikit-learn==1.6.1
+matplotlib==3.8.1
+typing-extensions==4.8.0

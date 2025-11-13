@@ -1,0 +1,80 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Environment variables
+*.env
+.env.*
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs
+*.log
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytest
+.pytest_cache/
+.cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# FastAPI static / uploads (optional)
+staticfiles/
+media/
+uploads/
+
+# MacOS files
+.DS_Store
+
+# pyenv
+.python-version
+
+# Docker (nếu có dùng)
+*.pid
+
+# Local development
+*.sqlite3

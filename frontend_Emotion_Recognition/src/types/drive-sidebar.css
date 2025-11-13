@@ -1,0 +1,49 @@
+/* === Scale cho DriveLeftSidebar === */
+.drive-sidebar {
+  --sb-scale: 1.20;                 /* 1.00 = mặc định, 1.10 = to hơn 10% */
+  --sb-font: calc(16px * var(--sb-scale));
+
+  --sb-pad-y: calc(0.55rem * var(--sb-scale));
+  --sb-pad-x: calc(0.9rem * var(--sb-scale));
+  --sb-radius: calc(0.8rem * var(--sb-scale));
+
+  --sb-icon: calc(1.1rem * var(--sb-scale));       /* icon size */
+  --sb-badge: calc(0.8rem * var(--sb-scale));      /* cỡ chữ badge */
+  --sb-gap: calc(0.55rem * var(--sb-scale));
+}
+
+.drive-sidebar { 
+  font-size: var(--sb-font);
+  letter-spacing: 0.2px;
+}
+
+/* Nút trong sidebar (item, new, footer…) */
+.drive-sidebar .sb-btn {
+  padding: var(--sb-pad-y) var(--sb-pad-x);
+  border-radius: var(--sb-radius);
+}
+
+/* Icon trong sidebar */
+.drive-sidebar .sb-icon {
+  width: var(--sb-icon);
+  height: var(--sb-icon);
+}
+
+/* Badge dung lượng */
+.drive-sidebar .sb-badge {
+  font-size: var(--sb-badge);
+}
+
+/* Progress height to hơn */
+.drive-sidebar .sb-progress {
+  height: calc(0.5rem * var(--sb-scale));
+  border-radius: 999px;
+}
+
+/* Khoảng cách đều tay hơn */
+.drive-sidebar .sb-section { padding: var(--sb-gap) var(--sb-pad-x); }
+
+
+.drive-sidebar {
+  width: clamp(17rem, 18vw, 22rem);
+}
